@@ -1,0 +1,86 @@
+﻿<Page x:Class="DetskiySad.UserPages.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DetskiySad.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MenuPage">
+
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Grid.ColumnSpan="2">
+            <TextBlock Text="Меню"
+                           Margin="0,0,150,0"
+                           FontSize="30"
+                           FontFamily="Times New Roman"/>
+            <Button Content="Выход"
+                    Name="ExitBtn"
+                    Click="ExitBtn_Click"
+                    Height="50"
+                    Width="131"
+                    />
+        </StackPanel>
+
+       
+        <StackPanel Grid.Column="0"
+                    Grid.Row="1"
+                    Orientation="Vertical">
+            <Button Style = "{StaticResource MenuButton}"
+                    Name="BtnListKids"
+                    Visibility="Hidden"
+                    Margin="150,50,10,10"
+                    Content="Список студентов"                                       
+                    Click="ListKids_Click"/>            
+
+            <Button Style="{StaticResource MenuButton}"
+                    Name="BtnAddKid"
+                    Visibility="Hidden"
+                    Click="AddKid_Click"
+                    Margin="150,10,10,10"
+                    Content="Добавить студента"                                      
+                    />      
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="1"
+                    Orientation="Vertical">
+            
+            <Button Margin="-100,50,10,0"
+                    Name="BtnListTeachers"
+                    Visibility="Hidden"
+                    Style="{StaticResource MenuButton}"
+                    Content="Список сотрудников"
+                    
+                    Click="ListTeachers_Click"
+                    
+                    />
+            <Button Style="{StaticResource MenuButton}"
+                    Name="BtnAddTeacher"
+                    Visibility="Hidden"
+                    Margin="-100,20,10,0"
+                    Content="Добавить сотрудника"                    
+                    Click="AddTeacher_Click"
+                    
+                    />      
+                        
+
+        </StackPanel>
+
+    </Grid>
+</Page>
